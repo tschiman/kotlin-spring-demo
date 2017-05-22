@@ -16,15 +16,7 @@ import javax.annotation.PostConstruct;
  */
 @SpringBootApplication
 public class KotlinSpringDemoApplication extends RepositoryRestMvcAutoConfiguration {
-    @Autowired
-    private ObjectMapper objectMapper;
-
     public static void main(String[] args) {
         SpringApplication.run(KotlinSpringDemoApplication.class, args);
-    }
-
-    @PostConstruct
-    public void init() {
-        objectMapper.registerModule(new KotlinModule());
     }
 }
